@@ -1,0 +1,6 @@
+jupyter
+numpy>=1.0.0
+Flask
+pandas
+pytest
+requests

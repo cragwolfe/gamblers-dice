@@ -1,0 +1,8 @@
+FROM centos:7
+MAINTAINER Crag Wolfe <crag@example.com>
+
+RUN yum -y update; yum clean all; yum -y install epel-release; yum clean all;
+RUN yum -y install python34 python34-pip
+RUN pip3 install numpy requests
+
+CMD [ "/opt/dice/experiment.py" ]

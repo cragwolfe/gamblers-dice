@@ -1,0 +1,16 @@
+FROM centos:7
+MAINTAINER Crag Wolfe <crag@example.com>
+
+RUN mkdir  /data
+
+# If doing this for realsies, use scl python 35
+RUN yum -y update; yum clean all; yum -y install epel-release; yum clean all;
+RUN yum -y install bash python34 python34-pip
+RUN pip3 install Flask
+RUN /usr/bin/env python3.4
+
+EXPOSE 8777
+
+# Expects code to be mounted under /opt/dice
+
+CMD [ "/opt/dice/data_collector.py" ]
