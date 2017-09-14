@@ -21,7 +21,7 @@ services:
       - datacollector
     environment:
       - DATA_COLLECTOR_HOSTNAME=datacollector
-      - SOFT_STOP_SECONDS=6000
+      - SOFT_STOP_SECONDS=72000
       - DIE_BIAS=random
   expgambler:
     build:
@@ -33,5 +33,5 @@ services:
       - datacollector
     environment:
       - DATA_COLLECTOR_HOSTNAME=datacollector
-      - SOFT_STOP_SECONDS=6000
+      - SOFT_STOP_SECONDS=72000
       - DIE_BIAS=gambler

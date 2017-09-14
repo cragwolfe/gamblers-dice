@@ -31,7 +31,7 @@ def format_result(the_die):
            )
 
 def format_csv_result(the_die):
-    """Comma separated row: 
+    """Comma separated row:
          bias, total_rolls, normalized_freq_std_dev,
          roll_1_freq, ... , roll_n_freq
     """
@@ -53,7 +53,7 @@ def post_result(the_die, port):
 
 if __name__ == '__main__':
     die_bias = os.environ.get('DIE_BIAS', 'random')
-    seconds_threshold = int(os.environ.get('SOFT_STOP_SECONDS', '3000'))
+    seconds_threshold = int(os.environ.get('SOFT_STOP_SECONDS', '62400'))
     iters_for_first_result = os.environ.get('FIRST_ITER_TO_RECORD', 10)
     num_sides = os.environ.get('SIDES_ON_DIE', 6)
     data_collector_port = os.environ.get('DATA_COLLECTOR_PORT', '8777')
